@@ -1,38 +1,28 @@
 import React, { Component } from 'react';
 import Dispay from './Display';
 import DrampPad from './DramPad';
-import dataStorage from '../data/dataStorage';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: '',
-            href: '',
-            name: ''
+            dramPadName: ''
         }
-        this.getData = this.getData.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    const
-
-    getData(dataStorage) {
-        dataStorage.forEach()
+    handleClick(dramPadName) {
+        this.setState({ dramPadName });
     }
 
     render() {
         return (
             <div id="drum-machine">Drum Machine
-                <Dispay />
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
-                <div className="dram-pad">1</div>
+                <Dispay name={this.state.dramPadName}/>
+                <DrampPad
+                    data={this.props.data}
+                    onHandleClick={this.handleClick}
+                />
             </div>
         )
     }

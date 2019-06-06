@@ -4,7 +4,9 @@ import './App.css';
 class Display extends Component {
     render() {
         return (
-            <div>Display</div>
+            <div id="display">
+                {this.props.name}
+            </div>
         )
     }
 }
