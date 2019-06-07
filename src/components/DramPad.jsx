@@ -8,18 +8,27 @@ class DramPad extends Component {
     }
 
     handleClick(event) {
-        this.props.onHandleClick(event.target.value);
+        console.log(event.target.value);
+        // this.props.onHandleClick(event.target.value);
     }
 
     render() {
         const dramPads = [];
+        this.props.data.forEach(dramPad => {
+            dramPads.push(
+                <button
+                    id={"#" + dramPad.id}
+                    key={dramPad.name}
+                    className="dramPad"
+                >
+                    {dramPad.id}
+                </button>
+            )
+        })
         return (
-            <div id="">DramPad
-                this.props.data.forEach(dramPad){
-                    let idUpperCase = "#" + dramPad.id.toUpperCase();
-                    <button id="#`{dramPad.id}`">{dramPad.id}</button>
-}
-    </div>
+            <div id="dram">
+                {dramPads}
+            </div>
         )
     }
 }

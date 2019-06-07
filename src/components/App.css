@@ -1,0 +1,19 @@
+#drum-machine {
+    margin: 0 auto;
+    width: 28vw;
+    height: 31vw;
+    border: 1px solid darkred;
+}
+
+.dramPad {
+    width: 8vw;
+    height: 8vw;
+    font-size: 2em;
+}
+
+#display {
+    margin: 5% 0;
+    width: 50%;
+    height: 10%;
+    background-color: lightgray;
+}

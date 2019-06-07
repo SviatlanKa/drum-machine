@@ -17,7 +17,7 @@ class App extends Component {
 
     render() {
         return (
-            <div id="drum-machine">Drum Machine
+            <div id="drum-machine">
                 <Dispay name={this.state.dramPadName}/>
                 <DrampPad
                     data={this.props.data}
