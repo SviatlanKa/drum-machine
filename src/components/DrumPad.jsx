@@ -9,7 +9,8 @@ class DrumPad extends Component {
 
     handleClick(event) {
         event.target.querySelector('audio').play();
-        this.props.onHandleClick(event.target.id);
+        const nameState = "drumPadName";
+        this.props.onHandleClick(nameState, event.target.id);
     }
 
     render() {
