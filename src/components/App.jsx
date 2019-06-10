@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
+import PowerButton from './PowerButton';
 import Dispay from './Display';
-import DrampPad from './DramPad';
+import BankButton from './BankButton';
+import DrumpPad from './DrumPad';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            dramPadName: ''
+            drumPadName: '',
+            bank: false,
+            power: true
         }
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(dramPadName) {
-        this.setState({ dramPadName });
+    handleClick(drumPadName) {
+        this.setState({ drumPadName });
     }
 
     render() {
         return (
             <div id="drum-machine">
-                <Dispay name={this.state.dramPadName}/>
-                <DrampPad
+                <PowerButton />
+                <Dispay name={this.state.drumPadName}/>
+                <BankButton />
+                <DrumpPad
                     data={this.props.data}
                     onHandleClick={this.handleClick}
                 />
