@@ -8,26 +8,28 @@ class DrumPad extends Component {
     }
 
     handleClick(event) {
-        event.target.querySelector('audio').play();
-        const nameState = "drumPadName";
-        this.props.onHandleClick(nameState, event.target.id);
+        if (this.props.power) {
+            event.target.querySelector('audio').play();
+            const nameState = "drumPadName";
+            this.props.onHandleClick(nameState, event.target.id);
+        }
+
     }
 
     render() {
-        // const btn = document.querySelector('button');
-        // btn.addEventListener('click', this.handleClick);
+        let idx = this.props.bank ? 1 : 0;
         const drumPads = [];
         this.props.data.forEach(drumPad => {
             drumPads.push(
                 <button
-                    id={drumPad.name}
+                    id={drumPad.twoBanks[idx].name}
                     key={drumPad.id}
                     className="drum-pad"
                     onClick={this.handleClick}
                 >
                     <audio
                         className="clip"
-                        src={drumPad.href}
+                        src={drumPad.twoBanks[idx].href}
                         id={drumPad.id}
                     >
                     </audio>

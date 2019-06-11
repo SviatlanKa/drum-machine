@@ -16,24 +16,28 @@ class App extends Component {
     }
 
     handleClick(stateName, value) {
-        console.log(stateName);
-        this.setState({ "{stateName}": value });
+        this.setState({ [stateName]: value });
     }
 
     render() {
-        //add function to get data from button bank
         return (
             <div id="drum-machine">
                 <PowerButton
+                    power={this.state.power}
                     onHandleClick={this.handleClick}
                 />
-                <Dispay name={this.state.drumPadName}/>
+                <Dispay
+                    power={this.state.power}
+                    name={this.state.drumPadName}
+                />
                 <BankButton
-
+                    bank={this.state.bank}
+                    power={this.state.power}
+                    onHandleClick={this.handleClick}
                 />
                 <DrumpPad
                     data={this.props.data}
-                    //bank={this.state.bank}
+                    bank={this.state.bank}
                     power={this.state.power}
                     onHandleClick={this.handleClick}
                 />
