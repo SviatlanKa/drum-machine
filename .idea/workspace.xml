@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe97fdf3-e0ff-4bbd-9f43-b4841807e6bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BankButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BankButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DrumPad.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DrumPad.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PowerButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PowerButton.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="fe97fdf3-e0ff-4bbd-9f43-b4841807e6bc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -232,16 +226,15 @@
       <workItem from="1560185144675" duration="4601000" />
       <workItem from="1560233197122" duration="16786000" />
       <workItem from="1560327685300" duration="11269000" />
-      <workItem from="1560406712159" duration="16289000" />
+      <workItem from="1560406712159" duration="16392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90205000" />
+    <option name="totallyTimeSpent" value="90308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="590" y="0" width="944" height="821" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2094818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
