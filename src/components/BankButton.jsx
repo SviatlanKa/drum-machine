@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ActiveBankImage from '../icons/green.png';
-import InactiveBankImage from '../icons/metal.png';
+// import ActiveBankImage from '../icons/green.png';
+// import InactiveBankImage from '../icons/metal.png';
 import './App.css';
 
 class BankButton extends Component {
@@ -19,11 +19,11 @@ class BankButton extends Component {
     render() {
         const styles = {
             activeBank: {
-                backgroundImage: `url(${ActiveBankImage})`
+
             },
 
             inactiveBank: {
-                backgroundImage: `url(${InactiveBankImage})`
+
             }
         };
 
@@ -35,7 +35,7 @@ class BankButton extends Component {
             <div id="bank">
                 <span className="bank-label">Bank</span>
                 <button
-                    className="bank-button"
+                    className="bank-button metal radial"
                     onClick={this.handleClick}
                     style={checkPower}
                 >

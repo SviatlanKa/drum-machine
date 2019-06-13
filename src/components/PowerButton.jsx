@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PowerOn from '../icons/power-on.png';
-import PowerOff from '../icons/power-off.png';
+// import PowerOn from '../icons/power-on.png';
+// import PowerOff from '../icons/power-off.png';
 import './App.css';
 
 class PowerButton extends Component {
@@ -17,11 +17,11 @@ class PowerButton extends Component {
     render() {
         const styles = {
             powerOn: {
-                backgroundImage: `url(${PowerOn})`
+
             },
 
             powerOff: {
-                backgroundImage: `url(${PowerOff})`
+
             }
         }
 
@@ -31,7 +31,7 @@ class PowerButton extends Component {
             <div id="power">
                 <span className="power-label">Power</span>
                 <button
-                    className="power-button"
+                    className="power-button metal radial"
                     onClick={this.handleClick}
                     style={powerCheck}
                 >

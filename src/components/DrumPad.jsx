@@ -24,7 +24,7 @@ class DrumPad extends Component {
                 <button
                     id={drumPad.twoBanks[idx].name}
                     key={drumPad.id}
-                    className="drum-pad"
+                    className="drum-pad metal linear"
                     onClick={this.handleClick}
                 >
                     <audio

@@ -1,8 +1,14 @@
 #drum-machine {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
-    width: 28vw;
-    height: 31vw;
+    padding: 3vw;
+    width: 30vw;
+    height: 30vw;
     border: 1px solid darkred;
+    background-color: hsla(0,0%,90%,1);
+    background-image: linear-gradient(-45deg, hsla(0,0%,0%,0), hsla(0,0%,0%,.05) );
+    background-size: 5px;
 }
 
 #power, #bank {
@@ -26,16 +32,7 @@
     margin: 5% 0;
     width: 50%;
     height: 10%;
-
-    /*outline: 5px outset lightgray;*/
-    /*border: 2px solid darkslategray;*/
-    border: 5px solid hsl(0, 0%, 40%);
-    padding: 5px;
-    background: hsl(0, 0%, 20%);
-    outline: 5px solid hsl(0, 0%, 60%);
-    box-shadow:
-            0 0 0 10px hsl(0, 0%, 80%),
-            0 0 0 15px hsl(0, 0%, 90%);
+    background-color: whitesmoke;
 }
 
 .bank-label {
@@ -43,7 +40,40 @@
 }
 
 .drum-pad {
-    width: 8vw;
-    height: 8vw;
+    margin: 2px;
+    width: 75px; /*8vw*/
+    height: 75px; /*8vw*/
+    line-height: 75px;
+    font-weight: bold;
     font-size: 2em;
+    border-radius: 30%;
+}
+/*This code from http://simurai.com/lab/2011/08/21/brushed-metal*/
+.metal {
+    outline: none;
+    color: #333333;
+    text-shadow: hsla(0,0%,40%,.5) 0 -1px 0, hsla(0,0%,100%,.6) 0 2px 1px;
+
+    background-color: hsl(0,0%,90%);
+    box-shadow: inset hsla(0,0%,15%,.6) 0 0px 0px 2px,
+                inset hsla(0,0%,15%,.8) -1px 5px 4px,
+                inset hsla(0,0%,0%,.25) 0 -1px 0px 6px,
+                inset hsla(0,0%,100%,.7) 0 2px 1px 6px,
+                inset hsla(0,0%,0%,.15) 0 -5px 5px 4px,
+                inset hsla(0,0%,100%,.5) 0 5px 5px 4px;
+    transition: color .2s;
+}
+
+.radial {
+    background: radial-gradient(.7em 2em at top, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+                radial-gradient(.7em 2em at bottom, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+                radial-gradient(.7em 2em at right, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+                radial-gradient(.7em 2em at left, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%);
+
+    /*-webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 3%, hsla(0,0%,0%,.1) 3.5%),*/
+    /*-webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 6%, hsla(0,0%,100%,.1) 7.5%),*/
+    /*-webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),*/
+
+    /*-webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);*/
+
 }
