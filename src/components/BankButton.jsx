@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ActiveBankImage from '../icons/green.png';
+import InactiveBankImage from '../icons/metal.png';
 import './App.css';
 
 class BankButton extends Component {
@@ -15,20 +17,28 @@ class BankButton extends Component {
     }
 
     render() {
-        const bankOnBackgrnd = "url('../icons/green.png') no-repeat center center fixed";
-        const bankOffBackgrnd = "url('../icons/green.png') no-repeat center center fixed";
+        const styles = {
+            activeBank: {
+                backgroundImage: `url(${ActiveBankImage})`
+            },
 
-        const checkPower = this.props.power ? (this.props.bank ? {background: {bankOnBackgrnd}} : {background: {bankOffBackgrnd}})
-            : {};
+            inactiveBank: {
+                backgroundImage: `url(${InactiveBankImage})`
+            }
+        };
+
+        const checkPower = this.props.power ?
+            this.props.bank ? styles.activeBank : styles.inactiveBank
+            : styles.inactiveBank;
 
         return (
             <div id="bank">
+                <span className="bank-label">Bank</span>
                 <button
                     className="bank-button"
                     onClick={this.handleClick}
                     style={checkPower}
                 >
-                    Bank
                 </button>
             </div>
         )
