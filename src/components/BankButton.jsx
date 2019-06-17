@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import ActiveBankImage from '../icons/green.png';
-// import InactiveBankImage from '../icons/metal.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBullseye } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 class BankButton extends Component {
@@ -19,11 +19,13 @@ class BankButton extends Component {
     render() {
         const styles = {
             activeBank: {
-
+                color: "hsl(133, 100%, 40%)",
+                filter: "drop-shadow(0 0 .5rem hsl(133, 100%, 40%))"
             },
 
             inactiveBank: {
-
+                color: "hsl(8, 1%, 53%)",
+                filter: "drop-shadow(0 0 .5rem hsl(8, 1%, 53%))"
             }
         };
 
@@ -35,10 +37,10 @@ class BankButton extends Component {
             <div id="bank">
                 <span className="bank-label">Bank</span>
                 <button
-                    className="bank-button metal radial"
+                    className="bank-button"
                     onClick={this.handleClick}
-                    style={checkPower}
                 >
+                    <FontAwesomeIcon icon={faBullseye} className="icon" style={checkPower} />
                 </button>
             </div>
         )

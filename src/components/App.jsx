@@ -22,13 +22,13 @@ class App extends Component {
     render() {
         return (
             <div id="drum-machine">
-                <PowerButton
-                    power={this.state.power}
-                    onHandleClick={this.handleClick}
-                />
                 <Dispay
                     power={this.state.power}
                     name={this.state.drumPadName}
+                />
+                <PowerButton
+                    power={this.state.power}
+                    onHandleClick={this.handleClick}
                 />
                 <BankButton
                     bank={this.state.bank}

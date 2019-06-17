@@ -4,11 +4,11 @@ export const DRUM_DATA = [
     twoBanks: [
         {
             href: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
-            name: "Heater-1"
+            name: "Heater 1"
         },
         {
             href: "https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3",
-            name: "Chord-1"
+            name: "Chord 1"
         }
     ]
   },
@@ -17,11 +17,11 @@ export const DRUM_DATA = [
     twoBanks: [
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
-          name: "Heater-2"
+          name: "Heater 2"
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3",
-          name: "Chord-2"
+          name: "Chord 2"
         }
     ]
   },
@@ -30,11 +30,11 @@ export const DRUM_DATA = [
     twoBanks: [
         {
             href: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
-            name: "Heater-3"
+            name: "Heater 3"
         },
         {
             href: "https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3",
-            name: "Chord-3"
+            name: "Chord 3"
         }
     ]
   },
@@ -43,7 +43,7 @@ export const DRUM_DATA = [
     twoBanks: [
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
-          name: "Heater-4"
+          name: "Heater 4"
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3",
@@ -60,7 +60,7 @@ export const DRUM_DATA = [
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3",
-          name: "Dry-Open-HH"
+          name: "Dry Open HH"
         }
     ]
   },
@@ -69,11 +69,11 @@ export const DRUM_DATA = [
     twoBanks: [
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
-          name: "Open-HH"
+          name: "Open HH"
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3",
-          name: "Bold-Heater-1"
+          name: "Bold Heater 1"
         }
         ]
   },
@@ -82,11 +82,11 @@ export const DRUM_DATA = [
     twoBanks: [
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
-          name: "Kick-n' Hat"
+          name: "Kick n' Hat"
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3",
-          name: "Punchy-Kick"
+          name: "Punchy Kick"
         }
     ]
   },
@@ -99,7 +99,7 @@ export const DRUM_DATA = [
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3",
-          name: "Side-Stick"
+          name: "Side Stick"
         }
     ]
   },
@@ -108,7 +108,7 @@ export const DRUM_DATA = [
     twoBanks: [
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
-          name: "Closed-HH"
+          name: "Closed HH"
         },
         {
           href: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3",
