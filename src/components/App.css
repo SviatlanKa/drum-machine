@@ -1,13 +1,22 @@
+/*Shadows and gradients from https://css-tricks.com/the-backgound-clip-property-and-use-cases/
+and http://simurai.com/lab/2011/08/21/brushed-metal*/
+
 @import url('https://fonts.googleapis.com/css?family=Coda|Roboto&display=swap');
 
 #drum-machine {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
     padding: 2vw;
     width: 30vw;
     height: 30vw;
-    border: 1px solid darkred;
+    border: solid 3px #616161;
     background-color: hsla(0, 0%, 90%, 1);
     background-image:
             linear-gradient(-45deg,
@@ -19,10 +28,14 @@
 #power, #bank {
     display: flex;
     flex-direction: column;
-    width: 9vw;
+    padding-left: 2vw;
+    color: hsla(0, 0%, 20%, 1);
+    text-shadow:
+            hsla(0, 0%, 40%, .5) 0 -1px 0,
+            hsla(0, 0%, 100%, .6) 0 2px 1px;
 }
 
-.power-label {
+.power-label, .bank-label {
     text-align: center;
 }
 
@@ -32,7 +45,6 @@
     align-self: center;
     border-radius: 50%;
     outline: none;
-    appearance: none;
 
     text-shadow:
             hsla(210, 100%, 20%, .3) 0 -1px 0,
@@ -71,30 +83,31 @@
 }
 
 #display {
-    margin: 5% 0;
+    margin: 3% 0;
     font: 2em 'Coda', sans-serif;
     padding: 2%;
-    width: 50%;
+    width: 45%;
     height: 10%;
     outline: none;
     border:  inset .25em whitesmoke;
     background:
-            linear-gradient(to bottom, #b6b5b4 25%, #d9d9d8 50%, #b6b5b4 75%) border-box;
+            linear-gradient(to bottom, #b6b5b4 10%, #d9d9d8 50%, #b6b5b4 90%) border-box;
 }
 
-.bank-label {
-    text-align: center;
+#drum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .drum-pad {
-    margin: 5px;
-    width: 6vw;
-    height: 6vw;
+    margin: 0 3px 10px 3px;
+    width: 9vw;
+    height: 7vw;
     min-width: 64px;
     min-height: 64px;
     font-weight: bold;
     font-size: 2em;
-    font-family: 'Roboto', sans-serif;
     outline: none;
     border-radius: 30%;
 
@@ -140,3 +153,5 @@
             hsla(200, 100%, 80%, 1) 0 0 5px,
             hsla(210, 100%, 50%, .6) 0 0 20px;
 }
+
+@media ()
