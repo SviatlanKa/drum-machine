@@ -1,5 +1,4 @@
-/*Shadows and gradients from https://css-tricks.com/the-backgound-clip-property-and-use-cases/
-and http://simurai.com/lab/2011/08/21/brushed-metal*/
+/*Metal effect from http://simurai.com/lab/2011/08/21/brushed-metal*/
 
 @import url('https://fonts.googleapis.com/css?family=Coda|Roboto&display=swap');
 
@@ -14,84 +13,74 @@ and http://simurai.com/lab/2011/08/21/brushed-metal*/
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     padding: 2vw;
-    width: 30vw;
-    height: 30vw;
-    border: solid 3px #616161;
-    background-color: hsla(0, 0%, 90%, 1);
-    background-image:
-            linear-gradient(-45deg,
-            hsla(0, 0%, 0%, 0),
-            hsla(0, 0%, 0%, .05));
+    width: 26vw;
+    height: fit-content;
+    border: solid 1px #616161;
+    border-radius: 36px;
+    box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.66);
+    background-color: rgb(230,230,230);
+    background-image: linear-gradient(-45deg, rgba(0,0,0,0), rgba(0,0,0,.05));
     background-size: 5px;
 }
 
 #power, #bank {
     display: flex;
     flex-direction: column;
-    padding-left: 2vw;
-    color: hsla(0, 0%, 20%, 1);
-    text-shadow:
-            hsla(0, 0%, 40%, .5) 0 -1px 0,
-            hsla(0, 0%, 100%, .6) 0 2px 1px;
+    margin-bottom: 1.5vw;
+    padding-left: 1.5vw;
 }
 
 .power-label, .bank-label {
     text-align: center;
+    padding-bottom: .5vh;
+    color: rgb(51,51,51);
+    text-shadow: rgba(102,102,102,.5) 0 -1px 0, rgba(255,255,255,.6) 0 2px 1px;
 }
 
 .power-button, .bank-button {
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     align-self: center;
     border-radius: 50%;
     outline: none;
-
-    text-shadow:
-            hsla(210, 100%, 20%, .3) 0 -1px 0,
-            hsl(210, 100%, 85%) 0 2px 1px,
-            hsla(200, 100%, 80%, 1) 0 0 5px,
-            hsla(210, 100%, 50%, .6) 0 0 20px;
-    box-shadow:
-            inset hsla(0, 0%, 25%, .8) 0 0 0 2px,
-            0 -1px 1px #eee,
-            0 2px 2px #1d1d1d,
-            inset 0 0 1px #666,
-            inset 0 1px .125em #8b8b8b,
-            inset 0 2px .25em #a4a2a3,
-            inset 0 -1px .125em #8b8b8b,
-            inset 0 -2px .25em #a4a2a3,
-            inset 0 0 0 .375em #cdcdcd;
-    background:
-            repeating-radial-gradient(
-                    rgba(228, 228, 228, 0) 23px,
-                    rgba(228, 228, 228, .05) 25px,
-                    rgba(228, 228, 228, 0) 27px) border-box,
-            repeating-radial-gradient(
-                    rgba(139, 139, 139, 0) 19px,
-                    rgba(139, 139, 139, .05) 21px,
-                    rgba(139, 139, 139, 0) 23px) border-box,
-            conic-gradient(
-                    #cdcdcd, #9d9d9d, #808080,
-                    #bcbcbc, #c4c4c4, #e6e6e6,
-                    #dddddd, #a1a1a1, #7f7f7f,
-                    #8b8b8b, #bfbfbf, #e3e3e3,
-                    #d2d2d2, #a6a6a6, #858585,
-                    #8d8d8d, #c0c0c0, #e5e5e5,
-                    #d6d6d6, #9e9e9e, #828282,
-                    #8f8f8f, #bdbdbd, #e3e3e3, #cdcdcd);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+    /*box-shadow:*/
+    /*        inset hsla(0, 0%, 25%, .8) 0 0 0 2px,*/
+    /*        0 -1px 1px #eee,*/
+    /*        0 2px 2px #1d1d1d,*/
+    /*        inset 0 0 1px #666,*/
+    /*        inset 0 1px .125em #8b8b8b,*/
+    /*        inset 0 2px .25em #a4a2a3,*/
+    /*        inset 0 -1px .125em #8b8b8b,*/
+    /*        inset 0 -2px .25em #a4a2a3,*/
+    /*        inset 0 0 0 .375em #cdcdcd;*/
+    background: repeating-radial-gradient(rgba(228, 228, 228, 0) 23px,
+                                            rgba(228, 228, 228, .05) 25px,
+                                            rgba(228, 228, 228, 0) 27px) border-box,
+                repeating-radial-gradient(rgba(139, 139, 139, 0) 19px,
+                                            rgba(139, 139, 139, .05) 21px,
+                                            rgba(139, 139, 139, 0) 23px) border-box,
+                conic-gradient(
+                        #cdcdcd, #9d9d9d, #808080,
+                        #bcbcbc, #c4c4c4, #e6e6e6,
+                        #dddddd, #a1a1a1, #7f7f7f,
+                        #8b8b8b, #bfbfbf, #e3e3e3,
+                        #d2d2d2, #a6a6a6, #858585,
+                        #8d8d8d, #c0c0c0, #e5e5e5,
+                        #d6d6d6, #9e9e9e, #828282,
+                        #8f8f8f, #bdbdbd, #e3e3e3, #cdcdcd);
     background-size: cover;
 }
 
 #display {
-    margin: 3% 0;
-    font: 2em 'Coda', sans-serif;
+    margin: 3% 0 3% 3%;
+    font: 1.8em 'Coda', sans-serif;
     padding: 2%;
     width: 45%;
-    height: 10%;
+    height: 1.6em;
     outline: none;
-    border:  inset .25em whitesmoke;
-    background:
-            linear-gradient(to bottom, #b6b5b4 10%, #d9d9d8 50%, #b6b5b4 90%) border-box;
+    border: inset .15em whitesmoke;
+    background: linear-gradient(to bottom, #b6b5b4 0%, #d9d9d9 50%, #b6b5b4 100%) border-box;
 }
 
 #drum {
@@ -101,57 +90,41 @@ and http://simurai.com/lab/2011/08/21/brushed-metal*/
 }
 
 .drum-pad {
-    margin: 0 3px 10px 3px;
-    width: 9vw;
+    margin: 0 1% 2% 1%;
+    width: 7vw;
     height: 7vw;
     min-width: 64px;
     min-height: 64px;
     font-weight: bold;
     font-size: 2em;
     outline: none;
-    border-radius: 30%;
+    border-radius: 20%;
+    color: rgb(51,51,51);
+    text-shadow: rgba(102,102,102,.5) 0 -1px 0, rgba(255,255,255,.6) 0 2px 1px;
 
-    color: hsla(0, 0%, 20%, 1);
-    text-shadow:
-            hsla(0, 0%, 40%, .5) 0 -1px 0,
-            hsla(0, 0%, 100%, .6) 0 2px 1px;
-
-    background-color: hsl(0, 0%, 90%);
-    box-shadow: inset hsla(0, 0%, 25%, .8) 0 0 0 2px, /* border */
-                inset hsla(0, 0%, 15%, .8) 0 -1px 5px 4px, /* soft SD */
-                inset hsla(0, 0%, 0%, .25) 0 -1px 0 7px, /* bottom SD */
-                inset hsla(0, 0%, 100%, .7) 0 2px 1px 7px; /* top HL */
-
+    background-color: rgb(230,230,230);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
     background-image:
-            repeating-linear-gradient(
-                    to right, hsla(0, 0%, 50%, 0) 0%,
-                    hsla(0, 0%, 100%, 0) 6%,
-                    hsla(0, 0%, 100%, .1) 7.5%),
-            repeating-linear-gradient(
-                    to right, hsla(0, 0%, 0%,0) 0%,
-                    hsla(0, 0%, 0%, 0) 4%,
-                    hsla(0, 0%, 0%, .03) 4.5%),
-            repeating-linear-gradient(
-                    to right, hsla(0, 0%, 100%, 0) 0%,
-                    hsla(0, 0%, 100%, 0) 1.2%,
-                    hsla(0, 0%, 100%, .15) 2.2%),
-            linear-gradient(
-                    180deg, hsl(0, 0%, 78%) 0%,
-                    hsl(0, 0%, 90%) 47%,
-                    hsl(0, 0%, 78%) 53%,
-                    hsl(0, 0%, 70%) 100%);
+            repeating-linear-gradient(to right, rgba(128,128,128,0) 0%,
+                                                rgba(255,255,255,0) 6%,
+                                                rgba(0255,255,255,.1) 7.5%),
+            repeating-linear-gradient(to right, rgba(0,0,0,0) 0%,
+                                                rgba(0,0,0,0) 4%,
+                                                rgba(0,0,0,.03) 4.5%),
+            repeating-linear-gradient(to right, rgba(255,255,255,0) 0%,
+                                                rgba(255,255,255,0) 1.2%,
+                                                rgba(0255,255,255,.15) 2.2%),
+            linear-gradient(180deg, rgb(199,199,199) 0%,
+                                                rgb(230,230,230) 47%,
+                                                rgb(199,199,199) 53%,
+                                                rgb(179,179,179) 100%);
 }
 .icon {
     font-size: 3.5em;
 
 }
-.drum-pad:active {
-    color: hsl(210, 100%, 40%);
-    text-shadow:
-            hsla(210, 100%, 20%, .3) 0 -1px 0,
-            hsl(210, 100%, 85%) 0 2px 1px,
-            hsla(200, 100%, 80%, 1) 0 0 5px,
-            hsla(210, 100%, 50%, .6) 0 0 20px;
-}
-
-@media ()
+/*.drum-pad:active {*/
+/*    color: rgb(0,102,204);*/
+/*    text-shadow: rgba(0,51,102,.3) 0 -1px 0, rgba(179,217,255,1) 0 2px 1px,*/
+/*                    rgba(153,221,255,1) 0 0 5px, rgba(0,128,255,.6) 0 0 20px;*/
+/*}*/

@@ -9,6 +9,7 @@ class DrumPad extends Component {
 
     handleClick(event) {
         if (this.props.power) {
+            console.log(event.target);
             event.target.querySelector('audio').play();
             const nameState = "drumPadName";
             this.props.onHandleClick(nameState, event.target.id);
@@ -24,7 +25,7 @@ class DrumPad extends Component {
                 <button
                     id={drumPad.twoBanks[idx].name}
                     key={drumPad.id}
-                    className="drum-pad metal linear"
+                    className="drum-pad"
                     onClick={this.handleClick}
                 >
                     <audio
