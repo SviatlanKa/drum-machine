@@ -14,11 +14,11 @@ class DrumPad extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         let { isClick } = this.state;
-        if (this.state.isClick != prevState.isClick) {
+        if (this.state.isClick !== prevState.isClick) {
             let declaration = document.styleSheets[2].rules[6].style;
             declaration.setProperty('color', 'rgb(51,51,51)');
             declaration.setProperty('text-shadow', 'rgba(102,102,102,.5) 0 -1px 0, rgba(255,255,255,.6) 0 2px 1px');
-            // isClick = !isClick;
+            isClick = false;
             this.setState({ isClick });
         }
     }
