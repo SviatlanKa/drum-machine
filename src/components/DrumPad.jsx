@@ -15,6 +15,7 @@ class DrumPad extends Component {
             button.style.color='rgb(0,102,204)';
             button.style.textShadow ='rgba(0,51,102,.3) 0 -1px 0, rgba(179,217,255,1) 0 2px 1px, rgba(153,221,255,1) 0 0 5px, rgba(0,128,255,.6) 0 0 20px';
         }
+
     }
 
     handleMouseUp(event) {

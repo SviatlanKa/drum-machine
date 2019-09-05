@@ -26,13 +26,13 @@
 #power, #bank {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5vw;
-    padding-left: 1.5vw;
+    margin-bottom: 6%;
+    padding-left: 6%;
 }
 
 .power-label, .bank-label {
     text-align: center;
-    padding-bottom: .5vh;
+    padding-bottom: 4%;
     color: rgb(51,51,51);
     text-shadow: rgba(102,102,102,.5) 0 -1px 0, rgba(255,255,255,.6) 0 2px 1px;
 }
@@ -69,7 +69,9 @@
     font: 2vw 'Coda', sans-serif;
     padding: 2%;
     width: 45%;
-    height: 1.6em;
+    height: 2.8vw;
+    min-width: 32px;
+    min-height: 32px;
     outline: none;
     border: inset .15em whitesmoke;
     background: linear-gradient(to bottom, #b6b5b4 0%, #d9d9d9 50%, #b6b5b4 100%) border-box;
@@ -114,6 +116,38 @@
 
 @media screen and (max-width: 1160px){
     #drum-machine {
-        width: 52vw;
+        width: 39vw;
+    }
+    .power-button, .bank-button {
+        width: 6vw;
+        height: 6vw;
+        font-size: 3.8vw;
+    }
+    .drum-pad {
+        width: 10.5vw;
+        height: 10.5vw;
+        font-size: 3.8vw;
+    }
+    #display {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 620px){
+    #drum-machine {
+        width: 60vw;
+    }
+    .power-button, .bank-button {
+        width: 9vw;
+        height: 9vw;
+        font-size: 6vw;
+    }
+    .drum-pad {
+        width: 16vw;
+        height: 16vw;
+        font-size: 5vw;
+    }
+    #display {
+        font-size: 4vw;
     }
 }

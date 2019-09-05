@@ -19,7 +19,7 @@ class BankButton extends Component {
     render() {
         const styles = {
             activeBank: {
-                color: "hsl(133, 100%, 40%)",
+                color: "rgb(2, 176, 36)",
                 filter: "drop-shadow(0 0 .5rem hsl(133, 100%, 40%))"
             },
 

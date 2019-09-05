@@ -17,7 +17,7 @@ class PowerButton extends Component {
     render() {
         const styles = {
             powerOn: {
-                color: "rgb(0, 204, 44)",
+                color: "rgb(2, 176, 36)",
                 filter: "drop-shadow(0 0 .5rem rgb(0, 204, 44))"
             },
 
