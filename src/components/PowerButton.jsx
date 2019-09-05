@@ -17,13 +17,13 @@ class PowerButton extends Component {
     render() {
         const styles = {
             powerOn: {
-                color: "hsl(133, 100%, 40%)",
-                filter: "drop-shadow(0 0 .5rem hsl(133, 100%, 40%))"
+                color: "rgb(0, 204, 44)",
+                filter: "drop-shadow(0 0 .5rem rgb(0, 204, 44))"
             },
 
             powerOff: {
-                color: "hsl(8, 97%, 48%)",
-                filter: "drop-shadow(0 0 .5rem hsl(8, 97%, 48%))"
+                color: "rgb(241, 35, 4)",
+                filter: "drop-shadow(0 0 .5rem rgb(241, 35, 4))"
             }
         }
 
