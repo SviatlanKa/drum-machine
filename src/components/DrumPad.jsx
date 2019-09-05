@@ -45,6 +45,10 @@ class DrumPad extends Component {
     handleClick(event) {
         if (this.props.power) {
             let { isClick } = this.state;
+            let temp = document.getElementById(event.target.id);
+            temp.style.color='rgb(0,102,204)';
+            temp.style.textShadow ='rgba(0,51,102,.3) 0 -1px 0, rgba(179,217,255,1) 0 2px 1px, rgba(153,221,255,1) 0 0 5px, rgba(0,128,255,.6) 0 0 20px)';
+
             let declaration = document.styleSheets[2].rules[6].style;
             console.log(declaration);
             declaration.setProperty('color', 'rgb(0,102,204)');
