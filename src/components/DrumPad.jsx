@@ -7,6 +7,15 @@ class DrumPad extends Component {
         this.handleMouseDown = this.handleMouseDown.bind(this);
         this.handleMouseUp = this.handleMouseUp.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
+    }
+
+    componentDidMount() {
+        document.addEventListener('keypress', this.handleKeyPress);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('keypress', this.handleKeyPress);
     }
 
     handleMouseDown(event) {
@@ -15,7 +24,6 @@ class DrumPad extends Component {
             button.style.color='rgb(0,102,204)';
             button.style.textShadow ='rgba(0,51,102,.3) 0 -1px 0, rgba(179,217,255,1) 0 2px 1px, rgba(153,221,255,1) 0 0 5px, rgba(0,128,255,.6) 0 0 20px';
         }
-
     }
 
     handleMouseUp(event) {
@@ -27,15 +35,29 @@ class DrumPad extends Component {
     handleClick(event) {
         if (this.props.power) {
             event.target.querySelector('audio').play();
-            const nameState = "drumPadName";
-            this.props.onHandleClick(nameState, event.target.id);
+            console.log(event.target.id);
+            this.props.onHandleClick("drumPadName", event.target.id);
+        }
+    }
+
+    handleKeyPress(event) {
+        const { bank, power, data } = this.props;
+        if (power) {
+            const idx = bank ? 1 : 0;
+            const drumPad = data.filter(key => key.id === event.key.toUpperCase())//[0].twoBanks[idx].name;
+            if (drumPad.length > 0) {
+                const buttonId = drumPad[0].twoBanks[idx].name;
+                document.getElementById(buttonId).querySelector('audio').play();
+                this.props.onHandleClick("drumPadName", buttonId);
+            }
         }
     }
 
     render() {
-        let idx = this.props.bank ? 1 : 0;
+        const { bank, data } = this.props;
+        const idx = bank ? 1 : 0;
         const drumPads = [];
-        this.props.data.forEach(drumPad => {
+        data.forEach(drumPad => {
             drumPads.push(
                 <button
                     id={drumPad.twoBanks[idx].name}
